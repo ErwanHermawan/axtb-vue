@@ -1,0 +1,37 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "src/**/*.css", "src/**/*.scss"],
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "composite": true,
+    "baseUrl": "./src",
+    "types": ["@types/node", "@nuxt/vue-app"],
+    "paths": {
+      // -- ROOT
+      "@/*": ["./*"],
+
+      //-- CORE
+      "@img/*": ["core/asset/img/*"],
+      "@config/*": ["core/config/*"],
+      "@hooks/*": ["core/hooks/*"],
+      "@model/*": ["core/model/*"],
+      "@persist/*": ["core/persist/*"],
+      "@state/*": ["core/state/*"],
+      "@style/*": ["core/style/*"],
+      "@util/*": ["core/util/*"],
+
+      //-- INFRASTRUCTURE
+      "@api/*": ["infrastructure/api/*"],
+      "@widget/*": ["infrastructure/widget/*"],
+
+      //-- PRESENTATION
+      "@atom/*": ["presentation/component/atom/*"],
+      "@molecule/*": ["presentation/component/molecule/*"],
+      "@organism/*": ["presentation/component/organism/*"],
+      "@template/*": ["presentation/component/template/*"],
+      "@app/*": ["presentation/container/app/*"],
+      "@page/*": ["presentation/container/page/*"]
+    }
+  }
+}
